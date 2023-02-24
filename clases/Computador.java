@@ -1,41 +1,40 @@
-public class Computador {
+public class Computer {
 
-    // Atributos
-    private String marca;
-    private int memoriaRam;
-    private int capacidadDisco;
-    private boolean encendido;
+    // Attributes
+    private String brand;
+    private int ramMemory;
+    private int diskCapacity;
+    private boolean turnedOn;
 
     // Constructor
-    public Computador(String marca, int memoriaRam, int capacidadDisco, boolean encendido) {
-        this.marca = marca;
-        this.memoriaRam = memoriaRam;
-        this.capacidadDisco = capacidadDisco;
-        this.encendido = encendido;
+    public Computer(String brand, int ramMemory, int diskCapacity, boolean turnedOn) {
+        this.brand = brand;
+        this.ramMemory = ramMemory;
+        this.diskCapacity = diskCapacity;
+        this.turnedOn = turnedOn;
     }
 
-    // Métodos
-    public void encender() {
-        if (!encendido) {
-            System.out.println("Encendiendo el computador...");
-            encendido = true;
+    // Methods
+    public void turnOn() {
+        if (!turnedOn) {
+            System.out.println("Turning on the computer...");
+            turnedOn = true;
         } else {
-            System.out.println("El computador ya está encendido.");
+            System.out.println("The computer is already turned on.");
         }
     }
 
-    public void apagar() {
-        if (encendido) {
-            System.out.println("Apagando el computador...");
-            encendido = false;
+    public void turnOff() {
+        if (turnedOn) {
+            System.out.println("Turning off the computer...");
+            turnedOn = false;
         } else {
-            System.out.println("El computador ya está apagado.");
+            System.out.println("The computer is already turned off.");
         }
     }
 
-    public void aumentarMemoriaRam(int cantidad) {
-        memoriaRam += cantidad;
-        System.out.println("Se aumentó la memoria RAM en " + cantidad + " GB. La nueva cantidad es: " + memoriaRam + " GB.");
+    public void increaseRamMemory(int amount) {
+        ramMemory += amount;
+        System.out.println("RAM memory increased by " + amount + " GB. New amount: " + ramMemory + " GB.");
     }
-
 }

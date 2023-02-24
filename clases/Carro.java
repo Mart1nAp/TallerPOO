@@ -1,46 +1,45 @@
-public class Carro {
+public class Car {
 
-    // Atributos
-    private String marca;
-    private String modelo;
-    private int ano;
-    private int velocidadActual;
+    // Attributes
+    private String brand;
+    private String model;
+    private int year;
+    private int currentSpeed;
 
     // Constructor
-    public Carro(String marca, String modelo, int ano, int velocidadActual) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.ano = ano;
-        this.velocidadActual = velocidadActual;
+    public Car(String brand, String model, int year, int currentSpeed) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.currentSpeed = currentSpeed;
     }
 
-    // Métodos
-    public void acelerar(int cantidad) {
-        if (cantidad >= 0) {
-            velocidadActual += cantidad;
-            System.out.println("Acelerando " + cantidad + " km/h. Velocidad actual: " + velocidadActual + " km/h.");
+    // Methods
+    public void accelerate(int amount) {
+        if (amount >= 0) {
+            currentSpeed += amount;
+            System.out.println("Accelerating " + amount + " km/h. Current speed: " + currentSpeed + " km/h.");
         } else {
-            System.out.println("La cantidad de aceleración debe ser mayor o igual a cero.");
+            System.out.println("The acceleration amount must be greater than or equal to zero.");
         }
     }
 
-    public void frenar(int cantidad) {
-        if (cantidad >= 0) {
-            velocidadActual -= cantidad;
-            if (velocidadActual < 0) {
-                velocidadActual = 0;
+    public void brake(int amount) {
+        if (amount >= 0) {
+            currentSpeed -= amount;
+            if (currentSpeed < 0) {
+                currentSpeed = 0;
             }
-            System.out.println("Frenando " + cantidad + " km/h. Velocidad actual: " + velocidadActual + " km/h.");
+            System.out.println("Braking " + amount + " km/h. Current speed: " + currentSpeed + " km/h.");
         } else {
-            System.out.println("La cantidad de frenado debe ser mayor o igual a cero.");
+            System.out.println("The braking amount must be greater than or equal to zero.");
         }
     }
 
-    public void imprimirInformacion() {
-        System.out.println("Marca: " + marca);
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Año: " + ano);
-        System.out.println("Velocidad actual: " + velocidadActual + " km/h.");
+    public void printInformation() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+        System.out.println("Current speed: " + currentSpeed + " km/h.");
     }
-
 }

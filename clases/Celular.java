@@ -1,48 +1,47 @@
-public class Celular {
+public class Cellphone {
 
-    // Atributos
-    public String marca;
-    private String modelo;
-    private int capacidadBateria;
-    protected boolean cargando;
+    // Attributes
+    public String brand;
+    private String model;
+    private int batteryCapacity;
+    protected boolean charging;
 
     // Constructor
-    public Celular(String marca, String modelo, int capacidadBateria, boolean cargando) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.capacidadBateria = capacidadBateria;
-        this.cargando = cargando;
+    public Cellphone(String brand, String model, int batteryCapacity, boolean charging) {
+        this.brand = brand;
+        this.model = model;
+        this.batteryCapacity = batteryCapacity;
+        this.charging = charging;
     }
 
-    // Métodos
-    public void cargar() {
-        if (!cargando) {
-            System.out.println("Cargando el celular...");
-            cargando = true;
+    // Methods
+    public void charge() {
+        if (!charging) {
+            System.out.println("Charging the cellphone...");
+            charging = true;
         } else {
-            System.out.println("El celular ya está cargando.");
+            System.out.println("The cellphone is already charging.");
         }
     }
 
-    public void imprimirInformacion() {
-        System.out.println("Marca: " + marca);
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Capacidad bateria: " + capacidadBateria);
+    public void printInformation() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Battery capacity: " + batteryCapacity);
     }
 
-    public void usar(int minutos) {
-        if (cargando) {
-            System.out.println("No puedes usar el celular mientras está cargando.");
+    public void use(int minutes) {
+        if (charging) {
+            System.out.println("You cannot use the cellphone while it's charging.");
         } else {
-            int bateriaRestante = capacidadBateria - minutos;
-            if (bateriaRestante > 0) {
-                System.out.println("Usando el celular durante " + minutos + " minutos. Batería restante: " + bateriaRestante + " minutos.");
-                capacidadBateria = bateriaRestante;
+            int remainingBattery = batteryCapacity - minutes;
+            if (remainingBattery > 0) {
+                System.out.println("Using the cellphone for " + minutes + " minutes. Remaining battery: " + remainingBattery + " minutes.");
+                batteryCapacity = remainingBattery;
             } else {
-                System.out.println("La batería del celular se agotó.");
-                capacidadBateria = 0;
+                System.out.println("The cellphone battery has run out.");
+                batteryCapacity = 0;
             }
         }
     }
-
 }
