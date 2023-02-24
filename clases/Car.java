@@ -1,8 +1,8 @@
 public class Car {
 
     // Attributes
-    private String brand;
-    private String model;
+    public String brand;
+    public String model;
     private int year;
     private int currentSpeed;
 

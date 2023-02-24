@@ -1,7 +1,7 @@
 public class Computer {
 
     // Attributes
-    private String brand;
+    public String brand;
     private int ramMemory;
     private int diskCapacity;
     private boolean turnedOn;
